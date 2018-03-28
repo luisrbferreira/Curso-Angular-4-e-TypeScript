@@ -1,9 +1,9 @@
 //ES5
-// var dobroDoValor = function(numero) {
-//     return numero * 2;
-// }
+var dobroDoValor = function(numero) {
+    return numero * 2;
+}
 
-// console.log(dobroDoValor(7));
+console.log(dobroDoValor(7));
 
 //ES6 - Arrow Functions
 var dobroDoValor = (numero) => {
