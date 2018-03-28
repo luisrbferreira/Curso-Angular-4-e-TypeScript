@@ -1,5 +1,5 @@
 let ola = (nome: string, sobrenome: string) => {
-    console.log("Olá " + nome + sobrenome);
+    console.log("Olá " + nome + " " + sobrenome);
 }
 
 ola("Luis", "Ferreira");
@@ -13,10 +13,8 @@ let temporadasFriends: number = 10
 let estudandoAngular: boolean = true
 
 let listaDeFrutas: Array<string> = ['Uva', 'Banana', 'Abacaxi']
+
 //Mesma coisa de cima
 let listaDeFrutas2: string[] = ['Uva', 'Banana', 'Abacaxi']
 
 let notasDasProvas: Array<number> = [7.5, 8, 9]
-
-//Não pode :D
-mensagem = 10
