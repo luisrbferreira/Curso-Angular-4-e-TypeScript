@@ -1,64 +1,19 @@
 "use strict";
-var Carro = /** @class */ (function () {
-    function Carro(modelo, numeroDePortas) {
-        this.velocidade = 0;
-        this.modelo = modelo;
-        this.numeroDePortas = numeroDePortas;
-    }
-    Carro.prototype.acelerar = function () {
-        this.velocidade = this.velocidade + 10;
-    };
-    Carro.prototype.parar = function () {
-        this.velocidade = 0;
-    };
-    Carro.prototype.velocidadeAtual = function () {
-        return this.velocidade;
-    };
-    return Carro;
-}());
-var Concessionaria = /** @class */ (function () {
-    function Concessionaria(endereco, listaDeCarros) {
-        this.endereco = endereco;
-        this.listaDeCarros = listaDeCarros;
-    }
-    Concessionaria.prototype.fornecerEndereco = function () {
-        return this.endereco;
-    };
-    Concessionaria.prototype.mostrarListaDeCarros = function () {
-        return this.listaDeCarros;
-    };
-    return Concessionaria;
-}());
-var Pessoa = /** @class */ (function () {
-    function Pessoa(nome, carroPreferido) {
-        this.nome = nome;
-        this.carroPreferido = carroPreferido;
-    }
-    Pessoa.prototype.dizerNome = function () {
-        return this.nome;
-    };
-    Pessoa.prototype.dizerCarroPreferido = function () {
-        return this.carroPreferido;
-    };
-    Pessoa.prototype.comprarCarro = function (carro) {
-        this.carro = carro;
-    };
-    Pessoa.prototype.dizerCarroQueTem = function () {
-        return this.carro;
-    };
-    return Pessoa;
-}());
+Object.defineProperty(exports, "__esModule", { value: true });
+var Carro_1 = require("./Carro"); //Importando outra variável e dando um apelido pra ela
+var Pessoa_1 = require("./Pessoa");
+var Concessionaria_1 = require("./Concessionaria");
 // Criar carros
-var carroA = new Carro('Veloster', 3);
-var carroB = new Carro('Dodge', 4);
-var carroC = new Carro('Cerato', 4);
+var carroA = new Carro_1.default('Veloster', 3);
+var carroB = new Carro_1.default('Dodge', 4);
+var carroC = new Carro_1.default('Cerato', 4);
 // Lista de carros da concessionaria
 var listaDeCarros = [carroA, carroB, carroC];
-var concessionaria = new Concessionaria('Av Luiz Viana Filho', listaDeCarros);
+var concessionaria = new Concessionaria_1.default('Av Luiz Viana Filho', listaDeCarros);
 //  Exibir lista de carros
 console.log(concessionaria.mostrarListaDeCarros());
 // Comprar carro
-var cliente = new Pessoa('Luis', 'Veloster');
+var cliente = new Pessoa_1.default('Luis', 'Veloster');
 console.log(cliente.dizerCarroPreferido());
 concessionaria.mostrarListaDeCarros().map(function (carro) {
     console.log(carro);
