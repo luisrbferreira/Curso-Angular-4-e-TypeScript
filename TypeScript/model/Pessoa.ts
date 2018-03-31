@@ -1,6 +1,7 @@
 import Carro from './Carro'
 
 export default class Pessoa {
+    
     private nome: string
     private carroPreferido: string
     private carro: Carro
